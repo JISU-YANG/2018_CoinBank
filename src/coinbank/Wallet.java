@@ -4,36 +4,36 @@ import javax.swing.JOptionPane;
 
 public class Wallet {
 	String title = "CoinBank - My Wallet";
-	int money = 0; // ÀÜ°í
-	int sum_money = 0; // ´©Àû ÃæÀü±İ¾×
-	int money_choice = 0; // ¼±ÅÃÇÑ ÃæÀü±İ¾×
-	int finish_choice = 0; // ¸¶°¨¼±ÅÃ
-	int add_count = 0; // ÃæÀü È½¼ö
-	int max_count = 5; // ÃÖ´ë ÃæÀü È½¼ö
-	String [] ar_add_menu = {"10,000¿ø","100,000¿ø","1,000,000¿ø"};
-	String add_msg = "¡¤¡¡ÃæÀüÇÏ½Ç ±İ¾×À» ¼±ÅÃÇØÁÖ¼¼¿ä.";
-	String max_msg = "¡¤¡¡ÃÖ´ë ÃæÀü È½¼ö¸¦ ÃÊ°úÇÏ¼Ì½À´Ï´Ù.";
-	
-	// ÃæÀü¸Ş¼­µå
+	int money = 0; // ì”ê³ 
+	int sum_money = 0; // ëˆ„ì  ì¶©ì „ê¸ˆì•¡
+	int money_choice = 0; // ì„ íƒí•œ ì¶©ì „ê¸ˆì•¡
+	int finish_choice = 0; // ë§ˆê°ì„ íƒ
+	int add_count = 0; // ì¶©ì „ íšŸìˆ˜
+	int max_count = 5; // ìµœëŒ€ ì¶©ì „ íšŸìˆ˜
+	String [] ar_add_menu = {"10,000ì›","100,000ì›","1,000,000ì›"};
+	String add_msg = "Â·ã€€ì¶©ì „í•˜ì‹¤ ê¸ˆì•¡ì„ ì„ íƒí•´ì£¼ì„¸ìš”.";
+	String max_msg = "Â·ã€€ìµœëŒ€ ì¶©ì „ íšŸìˆ˜ë¥¼ ì´ˆê³¼í•˜ì…¨ìŠµë‹ˆë‹¤.";
+
+	// ì¶©ì „ë©”ì„œë“œ
 	void addMoney() {
 		if(add_count<max_count) {
 			money_choice = JOptionPane.showOptionDialog(null, add_msg, title, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, ar_add_menu, ar_add_menu[1]);
-				if(money_choice == 0){
-					money += 10000;
-					sum_money += 10000;
-					add_count++;
-				}else if(money_choice == 1){
-					money += 100000;
-					sum_money += 100000;
-					add_count++;
-				}else if(money_choice == 2){
-					money += 1000000;
-					sum_money += 1000000;
-					add_count++;
-				};
+			if(money_choice == 0){
+				money += 10000;
+				sum_money += 10000;
+				add_count++;
+			}else if(money_choice == 1){
+				money += 100000;
+				sum_money += 100000;
+				add_count++;
+			}else if(money_choice == 2){
+				money += 1000000;
+				sum_money += 1000000;
+				add_count++;
+			};
 		} else {
 			JOptionPane.showMessageDialog(null, max_msg, title, JOptionPane.DEFAULT_OPTION);
 		}
 	}
-		
+
 }

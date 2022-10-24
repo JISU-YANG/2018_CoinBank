@@ -11,58 +11,58 @@ public class Login {
 	int main = 0;
 	String idCheck = null;
 	String passCheck = null;
-	
-	String[] arrMain = {"¡¢º”«œ±‚"};
+
+	String[] arrMain = {"Ï†ëÏÜçÌïòÍ∏∞"};
 
 	String id = "user";
 	String pass = "1234";
-	
+
 	ImageIcon i = new ImageIcon("src/image/logo.gif");
 	// ImageIcon main_img = new ImageIcon("src/image/main.gif");
-	
-	
+
+
 	public Login() {}
 
 
 
-	
+
 	public void start() {
 		main = JOptionPane.showOptionDialog
-		(null, "", title, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, i, arrMain,arrMain[0] );
-		
-		
-		
+				(null, "", title, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, i, arrMain,arrMain[0] );
+
+
+
 		while(true) {
 			switch(main) {
-			case 0:
-				JTextField username = new JTextField();
-				JTextField password = new JPasswordField();
-				Object[] message = {
-						"æ∆¿Ãµ", username,
-						"\n∫Òπ–π¯»£", password
-				};
-				
-				int option = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.OK_CANCEL_OPTION,JOptionPane.PLAIN_MESSAGE,null);
+				case 0:
+					JTextField username = new JTextField();
+					JTextField password = new JPasswordField();
+					Object[] message = {
+							"ÏïÑÏù¥Îîî", username,
+							"\nÎπÑÎ∞ÄÎ≤àÌò∏", password
+					};
+
+					int option = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.OK_CANCEL_OPTION,JOptionPane.PLAIN_MESSAGE,null);
 					if (option == JOptionPane.OK_OPTION) {
 						if (username.getText().equals("user") && password.getText().equals("1234")) {
 							break;
 						} else{
-							JOptionPane.showMessageDialog(null, "æ∆¿Ãµ »§¿∫ ∫Òπ–π¯»£∞° ∆≤∏≥¥œ¥Ÿ.", title, JOptionPane.ERROR_MESSAGE);
+							JOptionPane.showMessageDialog(null, "ÏïÑÏù¥Îîî ÌòπÏùÄ ÎπÑÎ∞ÄÎ≤àÌò∏Í∞Ä ÌãÄÎ¶ΩÎãàÎã§.", title, JOptionPane.ERROR_MESSAGE);
 							continue;
 						}
 					} else {
 						System.exit(main);
 					}
-				
-				break;
-			case -1:
-				System.exit(main);
-				break;
+
+					break;
+				case -1:
+					System.exit(main);
+					break;
 			}
 			break;
-			
+
 		}
-	}	
+	}
 }
 
 

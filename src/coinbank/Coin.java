@@ -4,19 +4,19 @@ import java.util.Random;
 
 
 public class Coin {
-	// º¯¼ö ÃÊ±âÈ­
-	String coin_name = null; // ÄÚÀÎ ÀÌ¸§
-	double coin_price = 0; // ÄÚÀÎ ½Ã¼¼
-	int coin_change = 0; // ÄÚÀÎ º¯È­·®
-	double coin_cost = 0; // ÄÚÀÎ º¯µ¿ ¹üÀ§
-	int coin_have = 0; // º¸À¯ ÄÚÀÎ °³¼ö
-	double coin_percent = 0.0; // ÄÚÀÎ º¯µ¿ ÆÛ¼¾Æ®
-	double coin_simul = 0; // º¸À¯ ÄÚÀÎ ÀüÃ¼ ½Ã¼¼
-	
-	// ±âº» »ı¼ºÀÚ
+	// ë³€ìˆ˜ ì´ˆê¸°í™”
+	String coin_name = null; // ì½”ì¸ ì´ë¦„
+	double coin_price = 0; // ì½”ì¸ ì‹œì„¸
+	int coin_change = 0; // ì½”ì¸ ë³€í™”ëŸ‰
+	double coin_cost = 0; // ì½”ì¸ ë³€ë™ ë²”ìœ„
+	int coin_have = 0; // ë³´ìœ  ì½”ì¸ ê°œìˆ˜
+	double coin_percent = 0.0; // ì½”ì¸ ë³€ë™ í¼ì„¼íŠ¸
+	double coin_simul = 0; // ë³´ìœ  ì½”ì¸ ì „ì²´ ì‹œì„¸
+
+	// ê¸°ë³¸ ìƒì„±ì
 	public Coin() {}
 
-	// »ç¿ëÀÚ »ı¼ºÀÚ
+	// ì‚¬ìš©ì ìƒì„±ì
 	public Coin(String coin_name, double coin_price, int coin_change, double coin_cost, int coin_have, double coin_percent) {
 		this.coin_name = coin_name;
 		this.coin_price = coin_price;
@@ -25,22 +25,22 @@ public class Coin {
 		this.coin_have = coin_have;
 		this.coin_percent = coin_percent;
 	};
-	
 
-	// ½Ã¼¼º¯µ¿ ¸Ş¼­µå
+
+	// ì‹œì„¸ë³€ë™ ë©”ì„œë“œ
 	Double random() {
-		double max_price = 0, min_price = 0, range_price = 0; // ÄÚÀÎÀÇ ÃÖ´ë °¡°İ, ÃÖ¼Ò °¡°İ, °¡°İ ¹üÀ§
-		
-		Random random = new Random(); // ·£´ı°´Ã¼ »ı¼º
-		
+		double max_price = 0, min_price = 0, range_price = 0; // ì½”ì¸ì˜ ìµœëŒ€ ê°€ê²©, ìµœì†Œ ê°€ê²©, ê°€ê²© ë²”ìœ„
+
+		Random random = new Random(); // ëœë¤ê°ì²´ ìƒì„±
+
 		max_price = coin_price + (coin_price*coin_cost);
 		min_price = coin_price - (coin_price*coin_cost);
 		range_price = max_price - min_price;
 		coin_price = ((int)(random.nextDouble()*range_price + min_price));
 		return coin_price;
 	}
-	
-	// º¸À¯ ÄÚÀÎ ÀüÃ¼½Ã¼¼
+
+	// ë³´ìœ  ì½”ì¸ ì „ì²´ì‹œì„¸
 	Double price() {
 		coin_simul = coin_have * coin_price;
 		return coin_simul;
