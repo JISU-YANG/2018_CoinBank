@@ -36,7 +36,7 @@ KIT의 Java 단과 기초반을 이수하며, 마지막 과제인 팀 프로젝�
 - **언어**
     - Java
 - **라이브러리**
-    - javax
+    - Swing
 - **IDE**
     - Eclipse
 
